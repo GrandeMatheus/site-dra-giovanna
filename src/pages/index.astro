@@ -1,11 +1,151 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+	<!-- HERO -->
+	<section class="relative py-24 px-6 text-center bg-white overflow-hidden">
+		<!-- Fundo: imagem P&B da criança -->
+		<img
+			src="/src/images/bg-bebe.png"
+			alt="Bebê em preto e branco"
+			class="absolute inset-y-0 left-0 w-full max-w-[550px] object-cover object-left opacity-80 z-0 filter grayscale brightness-[1.1]"
+			style="object-position: left center;"
+		/>
+
+		<!-- Overlay branco suave para contraste -->
+		<div class="absolute inset-0 bg-white/ z-0 backdrop-blur-sm"></div>
+
+		<!-- Conteúdo principal -->
+		<div class="relative z-10">
+			<div class="flex justify-center">
+				<div
+					class="w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden border-4 border-brand-mint shadow-lg"
+				>
+					<img
+						src="/src/images/giovanna.jpg"
+						alt="Dra. Giovanna Paulo"
+						class="w-full h-full object-cover"
+						style="object-position: center 10%;"
+					/>
+				</div>
+			</div>
+
+			<h1 class="mt-6 text-3xl sm:text-4xl font-bold text-brand-moss">
+				Olá! Eu sou a Dra. Giovanna
+			</h1>
+
+			<p class="max-w-2xl mx-auto mt-4 text-lg text-gray-700 leading-relaxed">
+				Pediatra apaixonada por cuidar, orientar e acolher. Meu compromisso é
+				com a saúde e o bem-estar do seu filho — com empatia, ciência e muito
+				amor.
+			</p>
+
+			<div class="mt-8 flex justify-center gap-4 flex-wrap">
+				<a
+					href="https://api.whatsapp.com/send?phone=5511919945665"
+					class="bg-brand-mint text-white px-6 py-3 rounded-full shadow hover:scale-105 transition font-medium"
+				>
+					Agendar Consulta
+				</a>
+				<a
+					href="#sobre"
+					class="bg-white border border-brand-moss text-brand-moss px-6 py-3 rounded-full hover:bg-brand-pink/10 transition font-medium"
+				>
+					Conheça meu trabalho
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- SOBRE A DOUTORA -->
+	<section id="sobre" class="py-20 px-6 bg-white">
+		<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+			<div class="rounded-3xl overflow-hidden shadow-md">
+				<img
+					src="/src/images/giovanna-consultorio.jpg"
+					alt="Dra. Giovanna em atendimento"
+					class="object-cover w-full h-full"
+				/>
+			</div>
+			<div>
+				<h2 class="text-3xl font-bold text-brand-moss mb-4">Sobre mim</h2>
+				<p class="text-gray-700 text-lg leading-relaxed">
+					Sou médica pediatra dedicada a acompanhar de perto o crescimento das
+					crianças e orientar as famílias em cada etapa. Acredito em um
+					atendimento humanizado, com escuta ativa, acolhimento e muito carinho.
+					Minha missão é cuidar da saúde infantil com empatia, respeito e
+					conhecimento.
+				</p>
+			</div>
+		</div>
+	</section>
+	<!-- CTA INSTAGRAM -->
+	<section class="py-16 px-6 bg-white text-center">
+		<h2 class="text-2xl sm:text-3xl font-bold text-brand-moss mb-4">
+			Me acompanhe no Instagram
+		</h2>
+		<p class="max-w-2xl mx-auto text-lg text-gray-700 leading-relaxed mb-6">
+			Compartilho dicas, orientações e bastidores do consultório para ajudar
+			você a viver a pediatria de forma mais leve, informada e amorosa.
+		</p>
+		<a
+			href="https://www.instagram.com/dragiovannapaulo/"
+			target="_blank"
+			class="inline-block bg-brand-pink text-white px-6 py-3 rounded-full shadow hover:scale-105 transition font-medium"
+		>
+			Seguir no Instagram
+		</a>
+	</section>
+
+	<!-- ESPECIALIDADES -->
+	<section class="py-20 px-6 bg-[#FFF8F6]">
+		<div class="max-w-6xl mx-auto text-center">
+			<h2 class="text-3xl font-bold text-brand-moss mb-12">Especialidades</h2>
+			<div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+				<div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
+					<h3 class="text-xl font-semibold text-brand-moss mb-2">
+						Consulta Pediátrica
+					</h3>
+					<p class="text-gray-600">
+						Acompanhamento completo e humanizado do nascimento até a
+						adolescência.
+					</p>
+				</div>
+				<div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
+					<h3 class="text-xl font-semibold text-brand-moss mb-2">
+						Introdução Alimentar
+					</h3>
+					<p class="text-gray-600">
+						Orientação segura para os primeiros passos com os alimentos sólidos.
+					</p>
+				</div>
+				<div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
+					<h3 class="text-xl font-semibold text-brand-moss mb-2">
+						Consulta do Recém-Nascido
+					</h3>
+					<p class="text-gray-600">
+						Primeiros cuidados, rotina, sono e muito acolhimento para a nova
+						família.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA FINAL -->
+	<section class="bg-brand-mint text-white py-20 px-6 text-center">
+		<h2 class="text-3xl font-bold mb-4">Pronta para cuidar com amor?</h2>
+		<p class="max-w-xl mx-auto mb-8 text-lg">
+			Agende sua consulta comigo pelo WhatsApp e dê o primeiro passo para uma
+			infância mais saudável e feliz.
+		</p>
+		<a
+			href="https://api.whatsapp.com/send?phone=5511919945665"
+			class="bg-white text-brand-mint px-6 py-3 rounded-full font-medium shadow hover:bg-brand-pink/60 hover:text-white transition"
+		>
+			Falar com a Dra. Giovanna
+		</a>
+	</section>
+</BaseLayout>
