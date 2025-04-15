@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section class="py-20 px-6 bg-white text-brand-moss">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
+      <p class="mb-6 text-gray-700">
+        Ficarei feliz em responder suas dúvidas ou agendar uma consulta. Entre
+        em contato pelo WhatsApp ou Instagram.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a
+          href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi! Gostaria de agendar uma consulta com a Dra. Giovanna 😊"
+          target="_blank"
+          class="bg-brand-mint text-white px-6 py-3 rounded-full text-sm font-medium hover:scale-105 transition"
+        >
+          Falar via WhatsApp
+        </a>
+
+        <a
+          href="https://www.instagram.com/dragiovannapaulo"
+          target="_blank"
+          class="border border-brand-moss text-brand-moss px-6 py-3 rounded-full text-sm font-medium hover:bg-brand-pink/20 transition"
+        >
+          Enviar via Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

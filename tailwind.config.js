@@ -4,6 +4,7 @@ export default {
     extend: {
       colors: {
         brand: {
+         
           pink: "#E5A9A9",
           mint: "#A6D1B9",
           moss: "#83A79D",

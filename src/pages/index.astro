@@ -10,7 +10,7 @@ import "../styles/global.css";
 		<img
 			src="/src/images/bg-bebe.png"
 			alt="Bebê em preto e branco"
-			class="absolute inset-y-0 left-0 w-full max-w-[550px] object-cover object-left opacity-80 z-0 filter grayscale brightness-[1.1]"
+			class="absolute inset-y-0 left-0 w-full max-w-[550px] object-cover object-left opacity-100 z-0 filter grayscale brightness-[1.1]"
 			style="object-position: left center;"
 		/>
 
@@ -21,13 +21,12 @@ import "../styles/global.css";
 		<div class="relative z-10">
 			<div class="flex justify-center">
 				<div
-					class="w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden border-4 border-brand-mint shadow-lg"
+					class="relative w-44 h-44 sm:w-52 sm:h-52 mx-auto rounded-full overflow-hidden shadow-xl ring-4 ring-brand-mint bg-white"
 				>
 					<img
 						src="/src/images/giovanna.jpg"
 						alt="Dra. Giovanna Paulo"
-						class="w-full h-full object-cover"
-						style="object-position: center 10%;"
+						class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
 					/>
 				</div>
 			</div>
@@ -44,7 +43,7 @@ import "../styles/global.css";
 
 			<div class="mt-8 flex justify-center gap-4 flex-wrap">
 				<a
-					href="https://api.whatsapp.com/send?phone=5511919945665"
+					href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de marcar uma consulta. Você pode me passar as informações?"
 					class="bg-brand-mint text-white px-6 py-3 rounded-full shadow hover:scale-105 transition font-medium"
 				>
 					Agendar Consulta
@@ -71,16 +70,25 @@ import "../styles/global.css";
 			</div>
 			<div>
 				<h2 class="text-3xl font-bold text-brand-moss mb-4">Sobre mim</h2>
-				<p class="text-gray-700 text-lg leading-relaxed">
+				<p class="text-gray-700 text-lg leading-relaxed mb-6">
 					Sou médica pediatra dedicada a acompanhar de perto o crescimento das
 					crianças e orientar as famílias em cada etapa. Acredito em um
 					atendimento humanizado, com escuta ativa, acolhimento e muito carinho.
 					Minha missão é cuidar da saúde infantil com empatia, respeito e
 					conhecimento.
 				</p>
+
+				<!-- Botão Saiba Mais -->
+				<a
+					href="/sobre"
+					class="inline-block bg-brand-mint text-white px-6 py-3 rounded-full text-sm font-medium hover:scale-105 transition"
+				>
+					Saiba mais sobre meu trabalho
+				</a>
 			</div>
 		</div>
 	</section>
+
 	<!-- CTA INSTAGRAM -->
 	<section class="py-16 px-6 bg-white text-center">
 		<h2 class="text-2xl sm:text-3xl font-bold text-brand-moss mb-4">
@@ -130,6 +138,20 @@ import "../styles/global.css";
 						família.
 					</p>
 				</div>
+				<div
+					class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition md:col-span-3 md:max-w-md md:mx-auto"
+				>
+					<h3 class="text-xl font-semibold text-brand-moss mb-2">
+						Consulta Pré-Natal
+					</h3>
+					<p class="text-gray-600">
+						Uma consulta dedicada aos futuros pais, com orientações sobre os
+						primeiros cuidados com o recém-nascido, amamentação, rotina de sono,
+						vínculo afetivo e preparo emocional para a chegada do bebê. Um
+						momento de acolhimento e informação para viver o início da
+						maternidade com mais segurança e tranquilidade.
+					</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -142,7 +164,7 @@ import "../styles/global.css";
 			infância mais saudável e feliz.
 		</p>
 		<a
-			href="https://api.whatsapp.com/send?phone=5511919945665"
+			href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de marcar uma consulta. Você pode me passar as informações?"
 			class="bg-white text-brand-mint px-6 py-3 rounded-full font-medium shadow hover:bg-brand-pink/60 hover:text-white transition"
 		>
 			Falar com a Dra. Giovanna
