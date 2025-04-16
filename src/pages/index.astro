@@ -5,37 +5,29 @@ import "../styles/global.css";
 
 <BaseLayout>
 	<!-- HERO -->
-	<section class="relative py-24 px-6 text-center bg-white overflow-hidden">
-		<!-- Fundo: imagem P&B da criança -->
-		<img
-			src="/src/images/bg-bebe.png"
-			alt="Bebê em preto e branco"
-			class="absolute inset-y-0 left-0 w-full max-w-[550px] object-cover object-left opacity-100 z-0 filter grayscale brightness-[1.1]"
-			style="object-position: left center;"
-		/>
+	<section class="relative py-28 px-6 text-center bg-white overflow-hidden">
+		<!-- 🎥 Vídeo de fundo -->
+		<video
+			src="/src/images/hero-bebe.mp4"
+			autoplay
+			muted
+			loop
+			playsinline
+			class="absolute inset-0 w-full h-full object-cover object-left z-0 brightness-[1.1] grayscale"
+		></video>
 
-		<!-- Overlay branco suave para contraste -->
-		<div class="absolute inset-0 bg-white/ z-0 backdrop-blur-sm"></div>
+		<!-- 🧥 Camada escura transparente para leitura -->
+		<div
+			class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-0"
+		>
+		</div>
 
-		<!-- Conteúdo principal -->
-		<div class="relative z-10">
-			<div class="flex justify-center">
-				<div
-					class="relative w-44 h-44 sm:w-52 sm:h-52 mx-auto rounded-full overflow-hidden shadow-xl ring-4 ring-brand-mint bg-white"
-				>
-					<img
-						src="/src/images/giovanna.jpg"
-						alt="Dra. Giovanna Paulo"
-						class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
-					/>
-				</div>
-			</div>
-
-			<h1 class="mt-6 text-3xl sm:text-4xl font-bold text-brand-moss">
+		<!-- ✨ Conteúdo -->
+		<div class="relative z-10 text-white max-w-3xl mx-auto">
+			<h1 class="text-4xl sm:text-5xl font-bold leading-tight drop-shadow-lg">
 				Olá! Eu sou a Dra. Giovanna
 			</h1>
-
-			<p class="max-w-2xl mx-auto mt-4 text-lg text-gray-700 leading-relaxed">
+			<p class="mt-4 text-lg sm:text-xl drop-shadow-md">
 				Pediatra apaixonada por cuidar, orientar e acolher. Meu compromisso é
 				com a saúde e o bem-estar do seu filho — com empatia, ciência e muito
 				amor.
