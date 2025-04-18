@@ -5,8 +5,8 @@ import "../styles/global.css";
 
 <BaseLayout>
 	<!-- HERO -->
-	<section class="relative py-28 px-6 text-center bg-white overflow-hidden">
-		<!-- 🎥 Vídeo de fundo -->
+	<section class="relative py-44 px-6 text-center overflow-hidden">
+		<!-- Vídeo de fundo -->
 		<video
 			src="/src/images/hero-bebe.mp4"
 			autoplay
@@ -16,23 +16,26 @@ import "../styles/global.css";
 			class="absolute inset-0 w-full h-full object-cover object-left z-0 brightness-[1.1] grayscale"
 		></video>
 
-		<!-- 🧥 Camada escura transparente para leitura -->
+		<!-- Camada para contraste -->
 		<div
 			class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-0"
 		>
 		</div>
 
-		<!-- ✨ Conteúdo -->
+		<!-- Conteúdo -->
 		<div class="relative z-10 text-white max-w-3xl mx-auto">
-			<h1 class="text-4xl sm:text-5xl font-bold leading-tight drop-shadow-lg">
-				Olá! Eu sou a Dra. Giovanna
+			<h1
+				class="text-4xl sm:text-5xl font-bold leading-tight drop-shadow-lg text-brand-mint"
+			>
+				Com carinho, ciência<br class="hidden sm:inline" />
+				e cuidado em cada passo
 			</h1>
-			<p class="mt-4 text-lg sm:text-xl drop-shadow-md">
-				Pediatra apaixonada por cuidar, orientar e acolher. Meu compromisso é
-				com a saúde e o bem-estar do seu filho — com empatia, ciência e muito
-				amor.
+			<p
+				class="mt-4 text-lg sm:text-xl drop-shadow-md text-white max-w-2xl mx-auto"
+			>
+				Uma abordagem leve e humanizada para acompanhar o desenvolvimento do seu
+				filho com atenção, empatia e muito afeto.
 			</p>
-
 			<div class="mt-8 flex justify-center gap-4 flex-wrap">
 				<a
 					href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de marcar uma consulta. Você pode me passar as informações?"
@@ -51,26 +54,30 @@ import "../styles/global.css";
 	</section>
 
 	<!-- SOBRE A DOUTORA -->
-	<section id="sobre" class="py-20 px-6 bg-white">
-		<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-			<div class="rounded-3xl overflow-hidden shadow-md">
+	<section id="sobre" class="py-24 px-6">
+		<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+			<div
+				class="rounded-3xl overflow-hidden shadow-2xl ring-4 ring-brand-mint"
+				data-aos="fade-right"
+			>
 				<img
 					src="/src/images/giovanna-consultorio.jpg"
-					alt="Dra. Giovanna em atendimento"
-					class="object-cover w-full h-full"
+					alt="Dra. Giovanna Paulo em atendimento"
+					class="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
 				/>
 			</div>
-			<div>
-				<h2 class="text-3xl font-bold text-brand-moss mb-4">Sobre mim</h2>
-				<p class="text-gray-700 text-lg leading-relaxed mb-6">
-					Sou médica pediatra dedicada a acompanhar de perto o crescimento das
-					crianças e orientar as famílias em cada etapa. Acredito em um
-					atendimento humanizado, com escuta ativa, acolhimento e muito carinho.
-					Minha missão é cuidar da saúde infantil com empatia, respeito e
-					conhecimento.
+			<div data-aos="fade-left" data-aos-delay="100">
+				<h2 class="text-4xl font-bold text-brand-moss mb-6">
+					Muito prazer! Eu sou a Dra. Giovanna
+				</h2>
+				<p class="text-lg text-gray-700 leading-relaxed mb-6">
+					Sou médica pediatra apaixonada por acompanhar de perto o crescimento
+					das crianças e apoiar as famílias em todas as fases da infância.
+					<br /><br />
+					Acredito na importância de um atendimento humanizado, com escuta ativa,
+					acolhimento e orientações cuidadosas. Meu propósito vai além de tratar
+					— é acolher, educar e criar conexões de confiança.
 				</p>
-
-				<!-- Botão Saiba Mais -->
 				<a
 					href="/sobre"
 					class="inline-block bg-brand-mint text-white px-6 py-3 rounded-full text-sm font-medium hover:scale-105 transition"
@@ -82,53 +89,82 @@ import "../styles/global.css";
 	</section>
 
 	<!-- CTA INSTAGRAM -->
-	<section class="py-16 px-6 bg-white text-center">
-		<h2 class="text-2xl sm:text-3xl font-bold text-brand-moss mb-4">
-			Me acompanhe no Instagram
-		</h2>
-		<p class="max-w-2xl mx-auto text-lg text-gray-700 leading-relaxed mb-6">
-			Compartilho dicas, orientações e bastidores do consultório para ajudar
-			você a viver a pediatria de forma mais leve, informada e amorosa.
-		</p>
-		<a
-			href="https://www.instagram.com/dragiovannapaulo/"
-			target="_blank"
-			class="inline-block bg-brand-pink text-white px-6 py-3 rounded-full shadow hover:scale-105 transition font-medium"
-		>
-			Seguir no Instagram
-		</a>
+	<section class="py-20 px-6 text-center">
+		<div data-aos="fade-up">
+			<h2 class="text-3xl sm:text-4xl font-bold text-brand-moss mb-4">
+				Me acompanhe no Instagram 💬
+			</h2>
+			<p class="max-w-2xl mx-auto text-lg text-gray-700 leading-relaxed mb-8">
+				Compartilho dicas, curiosidades, orientações e bastidores do consultório
+				para te ajudar a viver a pediatria com leveza, segurança e muito
+				acolhimento.
+			</p>
+			<a
+				href="https://www.instagram.com/dragiovannapaulo/"
+				target="_blank"
+				class="inline-block bg-brand-pink text-white px-8 py-3 rounded-full shadow-lg hover:scale-105 transition font-medium"
+			>
+				Seguir no Instagram
+				<!-- FEED DO INSTAGRAM -->
+			</a>
+		</div>
 	</section>
+	<!-- Elfsight Instagram Feed -->
+	<div class="max-w-5xl mx-auto">
+		<script src="https://static.elfsight.com/platform/platform.js" async
+		></script>
+		<div
+			class="elfsight-app-6077e9f0-abe4-478c-b5a4-33044b6b63a5"
+			data-elfsight-app-lazy
+		>
+		</div>
+	</div>
+
 	<!-- COMO FUNCIONA O ATENDIMENTO -->
-	<section class="py-20 px-6 bg-brand-background text-brand-moss">
+	<section class="py-24 px-6 text-brand-moss">
 		<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-			<!-- Texto à esquerda -->
-			<div class="text-center md:text-left">
-				<h2 class="text-3xl font-bold mb-6">Como funciona o atendimento?</h2>
-				<p class="text-lg text-gray-700 leading-relaxed">
-					A Dra. Giovanna Paulo oferece atendimento pediátrico personalizado,
-					realizado de forma
-					<strong>presencial em consultório</strong> ou <strong
-						>a domicílio</strong
-					>, conforme a necessidade da família. O atendimento domiciliar é ideal
-					para pais que buscam mais conforto e praticidade, especialmente com
-					bebês recém-nascidos.
+			<!-- Texto -->
+			<div data-aos="fade-right">
+				<h2 class="text-3xl sm:text-4xl font-bold mb-6">
+					Cuidado que acolhe desde o primeiro contato
+				</h2>
+				<p class="text-lg text-gray-700 leading-relaxed mb-6">
+					Cuidar da saúde do seu filho é uma escolha que vai além de um simples
+					agendamento — é sobre confiar em alguém que caminhe junto com a sua
+					família em cada fase da infância.
 					<br /><br />
-					Antes da primeira consulta, é enviado um <strong
-						>formulário de avaliação inicial</strong
-					> para que o responsável possa informar o motivo do agendamento, histórico
-					de saúde da criança e outros pontos importantes. Isso permite um atendimento
-					mais assertivo, humanizado e focado nas reais necessidades da família.
+					A Dra. Giovanna Paulo oferece atendimento pediátrico <strong
+						>presencial em consultório</strong
+					> ou <strong>a domicílio</strong>, sempre respeitando o que faz mais
+					sentido para cada rotina e momento.
 					<br /><br />
-					Toda consulta é conduzida com empatia, escuta ativa e orientações claras
-					— respeitando o tempo e o momento de cada criança. O agendamento é feito
-					via WhatsApp, de forma simples e prática.
+					Para os atendimentos domiciliares, é enviado previamente um <strong
+						>formulário de avaliação personalizada</strong
+					>, onde os responsáveis podem compartilhar o histórico da criança,
+					motivo da consulta e outros pontos importantes. Essa etapa permite que
+					a consulta seja ainda mais precisa, humana e focada nas necessidades
+					reais de cada família.
+					<br /><br />
+					Independentemente do local, cada encontro é conduzido com <strong
+						>escuta ativa, empatia e muita delicadeza</strong
+					> — porque mais do que tratar, a Dra. Giovanna acredita em acolher, orientar
+					e criar vínculos de confiança duradouros.
+					<br /><br />
+					Se você procura um cuidado leve, atencioso e com embasamento científico,
+					está no lugar certo. A infância do seu filho merece esse carinho.
 				</p>
+				<a
+					href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de agendar uma consulta."
+					class="inline-block bg-brand-mint text-white px-6 py-3 rounded-full text-sm font-medium hover:scale-105 transition shadow"
+				>
+					Agendar consulta
+				</a>
 			</div>
 
-			<!-- Vídeo menor à direita -->
-			<div class="flex justify-center">
+			<!-- Imagem ilustrativa ou vídeo -->
+			<div class="flex justify-center" data-aos="fade-left">
 				<div
-					class="w-[300px] md:w-[350px] lg:w-[400px] rounded-3xl shadow-2xl overflow-hidden"
+					class="w-[300px] md:w-[400px] lg:w-[450px] rounded-3xl shadow-2xl overflow-hidden"
 				>
 					<video
 						src="/src/images/atendimento-pediatrico.mp4"
@@ -143,10 +179,10 @@ import "../styles/global.css";
 	</section>
 
 	<!-- ESPECIALIDADES -->
-	<section class="py-20 px-6 bg-[#FFF8F6]">
+	<section class="py-20 px-6">
 		<div class="max-w-6xl mx-auto text-center">
 			<h2 class="text-3xl font-bold text-brand-moss mb-12">Especialidades</h2>
-			<div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+			<div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3" data-aos="fade-up">
 				<div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
 					<h3 class="text-xl font-semibold text-brand-moss mb-2">
 						Consulta Pediátrica
@@ -182,9 +218,7 @@ import "../styles/global.css";
 					<p class="text-gray-600">
 						Uma consulta dedicada aos futuros pais, com orientações sobre os
 						primeiros cuidados com o recém-nascido, amamentação, rotina de sono,
-						vínculo afetivo e preparo emocional para a chegada do bebê. Um
-						momento de acolhimento e informação para viver o início da
-						maternidade com mais segurança e tranquilidade.
+						vínculo afetivo e preparo emocional para a chegada do bebê.
 					</p>
 				</div>
 			</div>
@@ -192,8 +226,10 @@ import "../styles/global.css";
 	</section>
 
 	<!-- CTA FINAL -->
-	<section class="bg-brand-mint text-white py-20 px-6 text-center">
-		<h2 class="text-3xl font-bold mb-4">Pronta para cuidar com amor?</h2>
+	<section class="py-20 px-6 text-center" data-aos="fade-up">
+		<h2 class="text-3xl font-bold text-brand-moss mb-4">
+			Pronta para cuidar com amor?
+		</h2>
 		<p class="max-w-xl mx-auto mb-8 text-lg">
 			Agende sua consulta comigo pelo WhatsApp e dê o primeiro passo para uma
 			infância mais saudável e feliz.
@@ -205,4 +241,18 @@ import "../styles/global.css";
 			Falar com a Dra. Giovanna
 		</a>
 	</section>
+	<script type="module">
+		import AOS from "aos";
+		import "aos/dist/aos.css";
+
+		AOS.init({
+			duration: 800,
+			once: true,
+			offset: 100,
+			easing: "ease-in-out",
+		});
+
+		// Garantir que reative ao navegar com Astro
+		setTimeout(() => AOS.refresh(), 500);
+	</script>
 </BaseLayout>

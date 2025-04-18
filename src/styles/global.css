@@ -4,4 +4,57 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply text-brand-moss font-outfit;
+    background-image: linear-gradient(
+      to bottom,
+      theme("colors.brand.backgroundStart") 0%,
+      theme("colors.brand.backgroundStart") 55%,
+      theme("colors.brand.backgroundEnd") 100%
+    );
+  }
+}
 
+  section h1, h2, h3 {
+    @apply font-bold text-brand-moss;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl leading-tight mb-4;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl leading-snug mb-4;
+  }
+
+  h3 {
+    @apply text-2xl leading-snug mb-3;
+  }
+
+  section p {
+    @apply text-base text-gray-700 leading-relaxed;
+  }
+
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-mint text-white px-6 py-3 rounded-full font-medium shadow hover:scale-105 transition;
+  }
+
+  .btn-outline {
+    @apply border border-brand-moss text-brand-moss px-6 py-3 rounded-full hover:bg-brand-pink/10 transition font-medium;
+  }
+
+  .section-default {
+    @apply py-20 px-6;
+  }
+
+  .container-center {
+    @apply max-w-6xl mx-auto px-6;
+  }
+
+  .text-lead {
+    @apply text-lg text-gray-700 leading-relaxed;
+  }
+}
