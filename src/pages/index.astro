@@ -5,7 +5,7 @@ import "../styles/global.css";
 
 <BaseLayout>
 	<!-- HERO -->
-	<section class="relative py-44 px-6 text-center overflow-hidden">
+	<section class="relative py-44 px-6 text-center overflow-hidden cursor-logo">
 		<!-- Vídeo de fundo -->
 		<video
 			src="/public/videos/hero-bebe.mp4"
@@ -52,20 +52,21 @@ import "../styles/global.css";
 			</div>
 		</div>
 	</section>
-
-	<!-- SOBRE A DOUTORA -->
+	<!-- SOBRE -->
 	<section id="sobre" class="py-24 px-6">
 		<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-			<div
-				class="rounded-3xl overflow-hidden shadow-2xl ring-4 ring-brand-mint"
-				data-aos="fade-right"
-			>
+			<!-- Imagem com animação flutuante -->
+			<div class="flex justify-center" data-aos="fade-right">
 				<img
-					src="/public/images/giovanna-consultorio.jpg"
-					alt="Dra. Giovanna Paulo em atendimento"
-					class="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+					src="/images/giovanna-consultorio.png"
+					alt="Dra. Giovanna Paulo"
+					class="w-[220px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[580px]
+								 transition-transform duration-500 hover:scale-105
+								 animate-float drop-shadow-[0_40px_80px_rgba(0,0,0,0.08)] cursor-logo"
 				/>
 			</div>
+
+			<!-- Texto -->
 			<div data-aos="fade-left" data-aos-delay="100">
 				<h2 class="text-4xl font-bold text-brand-moss mb-6">
 					Muito prazer! Eu sou a Dra. Giovanna
@@ -92,7 +93,7 @@ import "../styles/global.css";
 	<section class="py-20 px-6 text-center">
 		<div data-aos="fade-up">
 			<h2 class="text-3xl sm:text-4xl font-bold text-brand-moss mb-4">
-				Me acompanhe no Instagram 💬
+				Me acompanhe no Instagram
 			</h2>
 			<p class="max-w-2xl mx-auto text-lg text-gray-700 leading-relaxed mb-8">
 				Compartilho dicas, curiosidades, orientações e bastidores do consultório
@@ -105,20 +106,48 @@ import "../styles/global.css";
 				class="inline-block bg-brand-pink text-white px-8 py-3 rounded-full shadow-lg hover:scale-105 transition font-medium"
 			>
 				Seguir no Instagram
-				<!-- FEED DO INSTAGRAM -->
 			</a>
 		</div>
-	</section>
-	<!-- Elfsight Instagram Feed -->
-	<div class="max-w-5xl mx-auto">
-		<script src="https://static.elfsight.com/platform/platform.js" async
-		></script>
-		<div
-			class="elfsight-app-6077e9f0-abe4-478c-b5a4-33044b6b63a5"
-			data-elfsight-app-lazy
-		>
+
+		<!-- 🔽 Seta animada com tooltip -->
+		<div class="mt-16 flex justify-center relative group">
+			<!-- Tooltip -->
+			<span
+				class="absolute -top-10 left-1/2 -translate-x-1/2 bg-brand-mint text-white text-xs font-medium px-3 py-1 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition duration-300"
+			>
+				Veja os posts recentes
+			</span>
+
+			<!-- Ícone da seta -->
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="w-6 h-6 text-brand-pink animate-bounce-slow"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+				stroke-width="2"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"
+				></path>
+			</svg>
 		</div>
-	</div>
+	</section>
+
+	<!-- FEED DO INSTAGRAM -->
+	<section class="py-15 px-6" data-aos="fade-up" data-aos-delay="100">
+		<div
+			class="max-w-5xl mx-auto backdrop-blur-lg p-6 sm:p-10 rounded-3xl shadow-xl ring-1 ring-brand-mint transition-all duration-500 hover:ring-2 hover:ring-brand-pink cursor-logo"
+		>
+			<!-- Elfsight Instagram Feed -->
+			<script src="https://static.elfsight.com/platform/platform.js" async
+			></script>
+			<div
+				class="elfsight-app-6077e9f0-abe4-478c-b5a4-33044b6b63a5"
+				data-elfsight-app-lazy
+			>
+			</div>
+		</div>
+	</section>
 
 	<!-- COMO FUNCIONA O ATENDIMENTO -->
 	<section class="py-24 px-6 text-brand-moss">
@@ -161,7 +190,7 @@ import "../styles/global.css";
 				</a>
 			</div>
 
-			<!-- Imagem ilustrativa ou vídeo -->
+			<!-- Video Menina + urso -->
 			<div class="flex justify-center" data-aos="fade-left">
 				<div
 					class="w-[300px] md:w-[400px] lg:w-[450px] rounded-3xl shadow-2xl overflow-hidden"
@@ -172,7 +201,8 @@ import "../styles/global.css";
 						muted
 						loop
 						playsinline
-						class="w-full h-full object-cover"></video>
+						class="w-full h-full object-cover transition duration-500 ease-in-out hover:saturate-50 cursor-logo"
+					></video>
 				</div>
 			</div>
 		</div>
@@ -183,7 +213,9 @@ import "../styles/global.css";
 		<div class="max-w-6xl mx-auto text-center">
 			<h2 class="text-3xl font-bold text-brand-moss mb-12">Especialidades</h2>
 			<div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3" data-aos="fade-up">
-				<div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
+				<div
+					class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition cursor-logo"
+				>
 					<h3 class="text-xl font-semibold text-brand-moss mb-2">
 						Consulta Pediátrica
 					</h3>
@@ -192,7 +224,9 @@ import "../styles/global.css";
 						adolescência.
 					</p>
 				</div>
-				<div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
+				<div
+					class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition cursor-logo"
+				>
 					<h3 class="text-xl font-semibold text-brand-moss mb-2">
 						Introdução Alimentar
 					</h3>
@@ -200,7 +234,9 @@ import "../styles/global.css";
 						Orientação segura para os primeiros passos com os alimentos sólidos.
 					</p>
 				</div>
-				<div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
+				<div
+					class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition cursor-logo"
+				>
 					<h3 class="text-xl font-semibold text-brand-moss mb-2">
 						Consulta do Recém-Nascido
 					</h3>
@@ -210,7 +246,7 @@ import "../styles/global.css";
 					</p>
 				</div>
 				<div
-					class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition md:col-span-3 md:max-w-md md:mx-auto"
+					class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition md:col-span-3 md:max-w-md md:mx-auto cursor-logo"
 				>
 					<h3 class="text-xl font-semibold text-brand-moss mb-2">
 						Consulta Pré-Natal
@@ -225,6 +261,112 @@ import "../styles/global.css";
 		</div>
 	</section>
 
+	<!-- FAQ -->
+	<section id="faq" class="py-20 px-6">
+		<div class="max-w-4xl mx-auto">
+			<h2
+				class="text-3xl sm:text-4xl font-bold text-brand-moss mb-12 text-center"
+				data-aos="fade-up"
+			>
+				Dúvidas frequentes
+			</h2>
+
+			<div class="space-y-8">
+				<div
+					class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 cursor-logo"
+					data-aos="fade-up"
+					data-aos-delay="100"
+				>
+					<h3 class="text-lg font-semibold text-brand-moss mb-2">
+						Quando devo levar meu bebê à primeira consulta pediátrica?
+					</h3>
+					<p class="text-gray-700">
+						O ideal é que o recém-nascido tenha sua primeira consulta entre o 7º
+						e o 10º dia de vida. É um momento importante para acompanhar o peso,
+						a amamentação, o sono e esclarecer dúvidas dos pais.
+					</p>
+				</div>
+
+				<div
+					class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 cursor-logo"
+					data-aos="fade-up"
+					data-aos-delay="200"
+				>
+					<h3 class="text-lg font-semibold text-brand-moss mb-2">
+						Como funciona a consulta pediátrica a domicílio?
+					</h3>
+					<p class="text-gray-700">
+						Você agenda diretamente pelo WhatsApp. Antes da consulta, é enviado
+						um formulário de avaliação para entender melhor o caso da criança.
+						No dia, a Dra. Giovanna realiza o atendimento com todo cuidado e
+						estrutura, no conforto do seu lar.
+					</p>
+				</div>
+
+				<div
+					class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 cursor-logo"
+					data-aos="fade-up"
+					data-aos-delay="300"
+				>
+					<h3 class="text-lg font-semibold text-brand-moss mb-2">
+						Onde fica o consultório da Dra. Giovanna?
+					</h3>
+					<p class="text-gray-700">
+						O consultório fica em Santos/SP, com estrutura preparada para
+						acolher você e seu filho de forma confortável e segura. O endereço
+						completo é informado no momento do agendamento.
+					</p>
+				</div>
+
+				<div
+					class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 cursor-logo"
+					data-aos="fade-up"
+					data-aos-delay="400"
+				>
+					<h3 class="text-lg font-semibold text-brand-moss mb-2">
+						A Dra. Giovanna oferece orientação sobre introdução alimentar?
+					</h3>
+					<p class="text-gray-700">
+						Sim! Durante a consulta de introdução alimentar, são abordados os
+						sinais de prontidão, tipos de alimentos, formatos seguros e rotina
+						alimentar. Tudo com base em evidências e respeitando o tempo do bebê
+						e da família.
+					</p>
+				</div>
+
+				<div
+					class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 cursor-logo"
+					data-aos="fade-up"
+					data-aos-delay="500"
+				>
+					<h3 class="text-lg font-semibold text-brand-moss mb-2">
+						Posso fazer consulta pediátrica pré-natal com a Dra. Giovanna?
+					</h3>
+					<p class="text-gray-700">
+						Claro! A consulta pré-natal pediátrica é um espaço para tirar
+						dúvidas ainda na gestação, entender os primeiros cuidados com o
+						bebê, amamentação, sono e vínculo afetivo. Um momento de preparação
+						essencial para os futuros pais.
+					</p>
+				</div>
+
+				<div
+					class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 cursor-logo"
+					data-aos="fade-up"
+					data-aos-delay="600"
+				>
+					<h3 class="text-lg font-semibold text-brand-moss mb-2">
+						Como posso agendar uma consulta?
+					</h3>
+					<p class="text-gray-700">
+						O agendamento é feito de forma simples e rápida pelo WhatsApp. Basta
+						clicar no botão “Agendar Consulta” aqui no site e você será
+						direcionado automaticamente para a conversa.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 	<!-- CTA FINAL -->
 	<section class="py-20 px-6 text-center" data-aos="fade-up">
 		<h2 class="text-3xl font-bold text-brand-moss mb-4">
@@ -241,6 +383,15 @@ import "../styles/global.css";
 			Falar com a Dra. Giovanna
 		</a>
 	</section>
+
+	<!-- Botão Whatsapp - Mobile -->
+	<a
+		href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi%2C%20gostaria%20de%20agendar%20uma%20consulta."
+		class="fixed bottom-6 right-6 bg-brand-mint text-white px-5 py-3 rounded-full shadow-lg z-50 sm:hidden hover:scale-105 transition"
+	>
+		Agendar no WhatsApp
+	</a>
+
 	<script type="module">
 		import AOS from "aos";
 		import "aos/dist/aos.css";

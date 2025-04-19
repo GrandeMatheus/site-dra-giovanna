@@ -62,39 +62,58 @@ const currentYear = new Date().getFullYear();
           class="flex-1 flex justify-center gap-6 text-sm font-syncopate text-brand-moss"
         >
           <li>
-            <a href="/" class="hover:text-brand-pink transition">Início</a>
+            <a href="/" class="group relative">
+              <span class="hover:text-brand-pink transition">Início</span>
+              <span
+                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
           </li>
           <li>
-            <a href="/sobre" class="hover:text-brand-pink transition">Sobre</a>
+            <a href="/sobre" class="group relative">
+              <span class="hover:text-brand-pink transition">Sobre</span>
+              <span
+                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
           </li>
           <li>
-            <a href="/especialidades" class="hover:text-brand-pink transition"
-              >Especialidades</a
-            >
+            <a href="/especialidades" class="group relative">
+              <span class="hover:text-brand-pink transition"
+                >Especialidades</span
+              >
+              <span
+                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
           </li>
           <li>
-            <a href="/contato" class="hover:text-brand-pink transition"
-              >Contato</a
-            >
+            <a href="/contato" class="group relative">
+              <span class="hover:text-brand-pink transition">Contato</span>
+              <span
+                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
           </li>
         </ul>
-
         <!-- Botões -->
         <div class="flex items-center gap-4">
+          <!-- Instagram com efeito de rotação suave -->
           <a
             href="https://www.instagram.com/dragiovannapaulo"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-1 text-brand-moss hover:text-brand-pink transition text-sm"
+            class="group flex items-center gap-1 text-brand-moss hover:text-brand-pink transition text-sm"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="0 0 24 24"
-              class="w-5 h-5"
+              class="w-5 h-5 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
             >
-              <path d="..."></path>
-              <!-- Substitua com o path real do ícone -->
+              <path
+                d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8.75 2.75a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75Zm-4.25 1a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"
+              ></path>
             </svg>
             <span class="hidden sm:inline">Instagram</span>
           </a>

@@ -58,3 +58,18 @@
     @apply text-lg text-gray-700 leading-relaxed;
   }
 }
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 1.8s infinite;
+}
+
+.cursor-logo {
+  cursor: url('/public/assets/cursor-logo.png') 16 16, auto;}
