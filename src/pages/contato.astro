@@ -45,12 +45,41 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <!-- Formulário -->
       <form
-        action="https://formsubmit.co/seuemail@dominio.com"
+        action="https://formsubmit.co/dragiovannapaulo@gmail.com"
         method="POST"
-        class="space-y-4 bg-brand-background p-6 rounded-3xl shadow-md"
+        class="relative space-y-4 bg-brand-background p-6 rounded-3xl shadow-md pt-16"
         data-aos="fade-left"
+        onsubmit="handleSubmit(this)"
       >
+        <!-- Logo acima do formulário -->
+        <div class="absolute -top-1 left-1/2 transform -translate-x-1/2">
+          <img
+            src="/assets/logo-forms.png"
+            alt="Logo Dra. Giovanna"
+            class="h-10 w-auto drop-shadow-md"
+          />
+        </div>
+
+        <!-- Campos ocultos -->
         <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="hidden"
+          name="_subject"
+          value="Nova mensagem do site da Dra. Giovanna!"
+        />
+        <input type="hidden" name="_template" value="box" />
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Recebemos sua mensagem! Em breve responderemos com carinho. 💙"
+        />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://dragiovannapaulo.com.br/obrigado"
+        />
+
+        <!-- Campos visíveis -->
         <input
           type="text"
           name="nome"
@@ -71,10 +100,46 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           placeholder="Como posso te ajudar?"
           class="w-full h-32 border border-brand-moss rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-mint"
         ></textarea>
-        <button type="submit" class="btn-primary w-full">
-          Enviar mensagem
+
+        <button
+          id="submitBtn"
+          type="submit"
+          class="btn-primary w-full flex items-center justify-center gap-2"
+        >
+          <span id="btnText">Enviar mensagem</span>
+          <svg
+            id="spinner"
+            class="w-5 h-5 animate-spin hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+          </svg>
         </button>
       </form>
     </div>
   </section>
+
+  <script>
+    function handleSubmit(form) {
+      const btn = document.getElementById("submitBtn");
+      const text = document.getElementById("btnText");
+      const spinner = document.getElementById("spinner");
+
+      btn.disabled = true;
+      text.textContent = "Enviando...";
+      spinner.classList.remove("hidden");
+    }
+  </script>
 </BaseLayout>

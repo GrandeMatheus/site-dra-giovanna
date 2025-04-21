@@ -3,13 +3,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <!-- Hero: Introdução -->
-  <section class="py-24 px-6 text-brand-moss">
-    <div class="max-w-4xl mx-auto text-center" data-aos="fade-down">
-      <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+  <!-- HERO SOBRE -->
+  <section class="relative py-44 px-6 text-center overflow-hidden cursor-logo">
+    <!-- 🎥 Vídeo de fundo -->
+    <video
+      src="/public/videos/sobre.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover object-center z-0 brightness-[1.1] grayscale"
+    ></video>
+
+    <!-- 🧥 Camada escura suave -->
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-0"
+    >
+    </div>
+
+    <!-- ✨ Conteúdo -->
+    <div class="relative z-10 text-white max-w-3xl mx-auto" data-aos="fade-up">
+      <h1
+        class="text-4xl sm:text-5xl font-bold leading-tight drop-shadow-lg text-brand-mint"
+      >
         Conheça a Dra. Giovanna Paulo
       </h1>
-      <p class="text-lg text-brand-moss leading-relaxed">
+      <p
+        class="mt-4 text-lg sm:text-xl drop-shadow-md text-white max-w-2xl mx-auto"
+      >
         Médica pediatra, mãe, encantada pelo universo da infância e apaixonada
         pela Disney — uma mistura de ciência, cuidado e magia no atendimento.
       </p>
@@ -17,13 +38,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <!-- Seção biográfica -->
-  <section class="py-20 px-6 text-brand-moss">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+  <section id="sobre" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+      <!-- Imagem com animação flutuante -->
       <div class="flex justify-center" data-aos="fade-right">
+        <!-- Forma de fundo animada -->
+        <div
+          class="absolute w-[280px] sm:w-[360px] md:w-[460px] lg:w-[560px] h-[280px] sm:h-[360px] md:h-[460px] lg:h-[660px] xl:h[640px] rounded-full bg-brand-pink/20 blur-3x1 animate-reverse-float z-0"
+        >
+        </div>
         <img
-          src="/images/giovanna-sobre.jpg"
-          alt="Foto da Dra. Giovanna Paulo"
-          class="w-[300px] sm:w-[400px] lg:w-[500px] rounded-3xl shadow-2xl ring-4 ring-brand-mint animate-float"
+          src="/images/giovanna-sobre.png"
+          alt="Dra. Giovanna Paulo"
+          class="w-[220px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[580px]
+								 transition-transform duration-500 hover:scale-105
+								 animate-float drop-shadow-[0_40px_80px_rgba(0,0,0,0.08)] cursor-logo"
         />
       </div>
       <div data-aos="fade-left">
