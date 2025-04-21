@@ -3,51 +3,136 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <!-- Página de Especialidades -->
-  <section class="py-20 px-6 bg-brand-background text-brand-moss">
-    <div class="max-w-6xl mx-auto text-center">
-      <h1 class="text-4xl font-bold mb-12">Especialidades</h1>
-      <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-        <div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold text-brand-moss mb-2">
-            Consulta Pediátrica
-          </h3>
-          <p class="text-gray-600">
-            Acompanhamento completo e humanizado do nascimento até a
-            adolescência.
-          </p>
-        </div>
+  <!-- HERO ESPECIALIDADES -->
+  <section class="relative py-44 px-6 text-center overflow-hidden cursor-logo">
+    <!-- 🎥 Vídeo de fundo -->
+    <video
+      src="/public/videos/especialidades.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover object-left z-0 brightness-[1.1] grayscale"
+    ></video>
 
-        <div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold text-brand-moss mb-2">
-            Introdução Alimentar
-          </h3>
-          <p class="text-gray-600">
-            Orientação segura para os primeiros passos com os alimentos sólidos.
-          </p>
-        </div>
+    <!-- 🧥 Camada escura transparente para leitura -->
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-0"
+    >
+    </div>
 
-        <div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold text-brand-moss mb-2">
-            Consulta do Recém-Nascido
-          </h3>
-          <p class="text-gray-600">
-            Primeiros cuidados, rotina, sono e muito acolhimento para a nova
-            família.
-          </p>
-        </div>
+    <!-- ✨ Conteúdo -->
+    <div class="relative z-10 text-white max-w-3xl mx-auto" data-aos="fade-up">
+      <h1
+        class="text-4xl sm:text-5xl font-bold leading-tight drop-shadow-lg text-brand-mint"
+      >
+        Especialidades Pediátricas
+      </h1>
+      <p
+        class="mt-4 text-lg sm:text-xl drop-shadow-md text-white max-w-2xl mx-auto"
+      >
+        Um cuidado completo, gentil e baseado na ciência para cada fase da
+        infância.
+      </p>
+    </div>
+  </section>
 
-        <div class="bg-white rounded-3xl shadow p-6 hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold text-brand-moss mb-2">
-            Consulta Pré-Natal
-          </h3>
-          <p class="text-gray-600">
-            Uma consulta dedicada aos futuros pais, com orientações sobre os
-            primeiros cuidados com o recém-nascido, amamentação, rotina de sono,
-            vínculo afetivo e preparo emocional para a chegada do bebê.
-          </p>
-        </div>
+  <!-- BLOCO DE ESPECIALIDADES -->
+  <section class="py-20 px-6">
+    <div
+      class="max-w-6xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      <div
+        class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+      >
+        <h2 class="text-2xl font-semibold text-brand-moss mb-3">
+          Consulta Pediátrica
+        </h2>
+        <p class="text-gray-700">
+          Acompanhamento regular da saúde e desenvolvimento infantil, desde o
+          nascimento até a adolescência.
+        </p>
+      </div>
+
+      <div
+        class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+      >
+        <h2 class="text-2xl font-semibold text-brand-moss mb-3">
+          Consulta do Recém-Nascido
+        </h2>
+        <p class="text-gray-700">
+          Primeiras semanas de vida com foco em acolhimento, orientação sobre
+          amamentação, rotina e vínculo afetivo.
+        </p>
+      </div>
+
+      <div
+        class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+      >
+        <h2 class="text-2xl font-semibold text-brand-moss mb-3">
+          Introdução Alimentar
+        </h2>
+        <p class="text-gray-700">
+          Orientação individualizada para pais e cuidadores iniciarem a
+          alimentação complementar com segurança e leveza.
+        </p>
+      </div>
+
+      <div
+        class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+      >
+        <h2 class="text-2xl font-semibold text-brand-moss mb-3">
+          Consulta Pré-Natal Pediátrica
+        </h2>
+        <p class="text-gray-700">
+          Atendimento aos futuros pais com foco nos cuidados iniciais com o
+          bebê, preparo emocional e criação de vínculo.
+        </p>
+      </div>
+
+      <div
+        class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+      >
+        <h2 class="text-2xl font-semibold text-brand-moss mb-3">
+          Consulta de Urgência
+        </h2>
+        <p class="text-gray-700">
+          Atendimento ágil e humanizado para quadros agudos não emergenciais,
+          com foco na tranquilidade da família.
+        </p>
+      </div>
+
+      <div
+        class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+      >
+        <h2 class="text-2xl font-semibold text-brand-moss mb-3">
+          Acompanhamento do Sono
+        </h2>
+        <p class="text-gray-700">
+          Suporte para famílias com dúvidas sobre rotina noturna, higiene do
+          sono e mudanças de fase.
+        </p>
       </div>
     </div>
-  </section></BaseLayout
->
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-20 px-6 text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-brand-moss mb-4">
+      Pronta para cuidar com amor?
+    </h2>
+    <p class="max-w-xl mx-auto mb-8 text-lg">
+      Agende uma consulta e descubra um atendimento pediátrico acolhedor, leve e
+      baseado em evidências.
+    </p>
+    <a
+      href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de marcar uma consulta."
+      target="_blank"
+      class="bg-brand-mint text-white px-6 py-3 rounded-full font-medium shadow hover:bg-brand-pink/60 hover:text-white transition"
+    >
+      Agendar Consulta
+    </a>
+  </section>
+</BaseLayout>

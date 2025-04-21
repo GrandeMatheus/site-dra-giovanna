@@ -73,3 +73,16 @@
 
 .cursor-logo {
   cursor: url('/public/assets/cursor-logo.png') 16 16, auto;}
+
+  @ketframes float-revers{
+    0%, 100% {
+      transform: translateY(0px) scale(1);
+    }
+    50%{
+      transform: translateY(10px) scale(1.05);
+    }
+  }
+
+  .animate-reverse-float{
+    animation: float-reverse 6s ease-in-out infinitel;
+  }

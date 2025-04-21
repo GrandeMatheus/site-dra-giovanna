@@ -3,99 +3,120 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <!-- Sobre a Dra. Giovanna Paulo -->
-  <section class="py-20 px-6 bg-brand-background text-brand-moss">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl font-bold mb-6">Sobre a Dra. Giovanna Paulo</h1>
+  <!-- Hero: Introdução -->
+  <section class="py-24 px-6 text-brand-moss">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-down">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-6">
+        Conheça a Dra. Giovanna Paulo
+      </h1>
       <p class="text-lg text-brand-moss leading-relaxed">
-        Sou médica pediatra apaixonada pelo cuidado com a infância. Minha
-        trajetória na medicina começou movida pelo desejo de impactar vidas
-        desde os primeiros dias de nascimento. Graduada em Medicina e
-        especializada em Pediatria, me dedico a oferecer um atendimento
-        acolhedor, humanizado e baseado nas melhores práticas da medicina atual.
-        <br /><br />
-        Ao longo da minha formação e atuação clínica, compreendi que ser pediatra
-        é mais do que diagnosticar e tratar — é estar presente, orientar e apoiar
-        emocionalmente cada família. Busco sempre criar uma conexão de confiança
-        com os pequenos pacientes e seus responsáveis, escutando com empatia e cuidando
-        com carinho e precisão.
-        <br /><br />
-        Minha atuação envolve o acompanhamento do desenvolvimento infantil, consultas
-        de rotina, introdução alimentar, primeiros cuidados com recém-nascidos, orientação
-        no pré-natal pediátrico e suporte à parentalidade. Acredito na força do vínculo
-        médico-família como um elo essencial para o bem-estar da criança.
-        <br /><br />
-        Hoje, além de atuar em consultório, também compartilho conhecimento nas redes
-        sociais, criando conteúdos educativos e acessíveis sobre saúde infantil.
-        Essa é uma extensão do meu compromisso: levar informação de qualidade para
-        mais famílias e contribuir com a construção de uma infância mais saudável,
-        feliz e respeitada.
-        <br /><br />
-        Sou médica pediatra apaixonada por acompanhar de perto o desenvolvimento
-        infantil e apoiar as famílias em todas as fases da infância. Acredito na
-        importância de um atendimento humanizado, com escuta ativa, acolhimento e
-        orientação cuidadosa.
-        <br /><br />
-        Minha missão é promover saúde com empatia, ciência e respeito — construindo
-        vínculos de confiança que fazem a diferença no bem-estar físico e emocional
-        das crianças. Cuidar vai muito além de tratar: é estar presente, orientar
-        e acolher com carinho em cada detalhe da jornada.
-        <br /><br />
-        A cada consulta, busco transformar o atendimento em uma experiência leve,
-        acolhedora e informativa para pais e responsáveis. Aqui, cada criança é única
-        e cada família é ouvida com atenção.
+        Médica pediatra, mãe, encantada pelo universo da infância e apaixonada
+        pela Disney — uma mistura de ciência, cuidado e magia no atendimento.
       </p>
-
-      <a
-        href="/contato"
-        class="inline-block mt-8 bg-brand-mint text-white px-6 py-3 rounded-full font-medium hover:bg-brand-pink/20 transition"
-      >
-        Entre em contato
-      </a>
     </div>
   </section>
 
-  <!-- Valores e imagem -->
-  <section class="py-16 px-6">
-    <div
-      class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12"
-    >
-      <div class="flex justify-center">
+  <!-- Seção biográfica -->
+  <section class="py-20 px-6 text-brand-moss">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="flex justify-center" data-aos="fade-right">
+        <img
+          src="/images/giovanna-sobre.jpg"
+          alt="Foto da Dra. Giovanna Paulo"
+          class="w-[300px] sm:w-[400px] lg:w-[500px] rounded-3xl shadow-2xl ring-4 ring-brand-mint animate-float"
+        />
+      </div>
+      <div data-aos="fade-left">
+        <p class="text-lg leading-relaxed text-gray-700">
+          Sou médica pediatra apaixonada por acompanhar de perto o
+          desenvolvimento das crianças e apoiar as famílias em cada fase da
+          infância.
+          <br /><br />
+          Minha jornada na medicina começou com o desejo genuíno de fazer a diferença
+          na vida de pequenos seres humanos desde seus primeiros passos. Me formei
+          em medicina, me especializei em pediatria e nunca parei de estudar.
+          <br /><br />
+          Como mãe, entendo na pele os desafios da parentalidade. Como médica, busco
+          ser uma ponte entre o conhecimento técnico e o acolhimento humano.
+          <br /><br />
+          Atuo com amor e responsabilidade em consultas de rotina, introdução alimentar,
+          primeiros cuidados, acompanhamento do desenvolvimento, e também com orientação
+          pré-natal pediátrica. Cada família é acolhida com escuta ativa, empatia
+          e respeito.
+          <br /><br />
+          Nas redes sociais, compartilho informações acessíveis para ampliar o alcance
+          do cuidado pediátrico, ajudando mais pais a viverem a maternidade e paternidade
+          com leveza e segurança.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores pessoais -->
+  <section class="py-20 px-6 bg-brand-background">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-brand-moss mb-8">
+        Meus pilares de cuidado
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-8 text-left text-gray-700">
         <div
-          class="overflow-hidden rounded-3xl shadow-xl ring-4 ring-brand-mint max-w-sm md:max-w-md lg:max-w-lg"
+          class="p-4 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all"
         >
-          <img
-            src="/public/images/giovanna-sobre.jpg"
-            alt="Foto da Dra. Giovanna Paulo, médica pediatra"
-            class="w-full h-auto object-cover object-top"
-          />
+          <h3 class="text-xl font-semibold text-brand-mint mb-2">Empatia</h3>
+          <p>
+            Atendo cada família com respeito à sua história e com escuta ativa.
+          </p>
+        </div>
+        <div
+          class="p-4 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all"
+        >
+          <h3 class="text-xl font-semibold text-brand-mint mb-2">
+            Ciência Atualizada
+          </h3>
+          <p>
+            Minhas condutas são baseadas nas melhores práticas e evidências
+            atuais.
+          </p>
+        </div>
+        <div
+          class="p-4 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all"
+        >
+          <h3 class="text-xl font-semibold text-brand-mint mb-2">
+            Acolhimento
+          </h3>
+          <p>
+            Crio um ambiente leve e seguro para que crianças e responsáveis se
+            sintam em casa.
+          </p>
+        </div>
+        <div
+          class="p-4 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all"
+        >
+          <h3 class="text-xl font-semibold text-brand-mint mb-2">Vínculo</h3>
+          <p>
+            Construo relações duradouras com base na confiança médico-família.
+          </p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div>
-        <h2 class="text-2xl font-semibold mb-4 text-brand-moss">
-          Valores que guiam meu trabalho:
-        </h2>
-        <ul
-          class="text-gray-700 space-y-3 text-base leading-relaxed list-disc list-inside"
-        >
-          <li>
-            <strong>Empatia:</strong> entender e acolher cada família com escuta
-            ativa e respeito.
-          </li>
-          <li>
-            <strong>Ciência e Atualização:</strong> basear condutas nas melhores
-            evidências.
-          </li>
-          <li>
-            <strong>Acolhimento:</strong> criar um ambiente leve e seguro para crianças
-            e responsáveis.
-          </li>
-          <li>
-            <strong>Vínculo:</strong> construir confiança através do cuidado contínuo.
-          </li>
-        </ul>
-      </div>
+  <!-- CTA -->
+  <section class="py-20 px-6 text-center">
+    <div data-aos="zoom-in">
+      <h2 class="text-3xl font-bold text-brand-moss mb-4">
+        Quer conversar comigo?
+      </h2>
+      <p class="text-lg text-gray-700 mb-6">
+        Ficarei feliz em conhecer sua família e contribuir com carinho para o
+        bem-estar do seu filho.
+      </p>
+      <a
+        href="/contato"
+        class="inline-block bg-brand-mint text-white px-6 py-3 rounded-full font-medium hover:bg-brand-pink/20 transition"
+      >
+        Fale com a Dra. Giovanna
+      </a>
     </div>
   </section>
 </BaseLayout>

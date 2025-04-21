@@ -3,31 +3,78 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <section class="py-20 px-6 text-brand-moss">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
-      <p class="mb-6 text-gray-700">
-        Ficarei feliz em responder suas dúvidas ou agendar uma consulta. Entre
-        em contato pelo WhatsApp ou Instagram.
+  <!-- HERO CONTATO -->
+  <section class="relative py-44 px-6 text-center overflow-hidden cursor-logo">
+    <div class="absolute inset-0 bg-brand-gradient z-0"></div>
+
+    <div
+      class="relative z-10 text-brand-moss max-w-2xl mx-auto"
+      data-aos="fade-up"
+    >
+      <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-4">
+        Vamos conversar?
+      </h1>
+      <p class="text-lg sm:text-xl text-brand-moss">
+        Estou aqui para te ajudar com carinho, escuta ativa e muita atenção.
+        Entre em contato para tirar dúvidas ou agendar uma consulta.
       </p>
+    </div>
+  </section>
 
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
+  <!-- FORMULÁRIO DE CONTATO -->
+  <section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+      <!-- Texto acolhedor -->
+      <div data-aos="fade-right">
+        <h2 class="text-3xl font-bold text-brand-moss mb-4">
+          Fale com a Dra. Giovanna
+        </h2>
+        <p class="text-lead mb-6">
+          Seja para esclarecer dúvidas, pedir orientações ou marcar uma
+          consulta, estou à disposição. Preencha o formulário ou fale
+          diretamente pelo WhatsApp.
+        </p>
         <a
-          href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi! Gostaria de agendar uma consulta com a Dra. Giovanna 😊"
+          href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi! Gostaria de mais informações."
           target="_blank"
-          class="bg-brand-mint text-white px-6 py-3 rounded-full text-sm font-medium hover:scale-105 transition"
+          class="btn-primary inline-block"
         >
-          Falar via WhatsApp
-        </a>
-
-        <a
-          href="https://www.instagram.com/dragiovannapaulo"
-          target="_blank"
-          class="border border-brand-moss text-brand-moss px-6 py-3 rounded-full text-sm font-medium hover:bg-brand-pink/20 transition"
-        >
-          Enviar via Instagram
+          Chamar no WhatsApp
         </a>
       </div>
+
+      <!-- Formulário -->
+      <form
+        action="https://formsubmit.co/seuemail@dominio.com"
+        method="POST"
+        class="space-y-4 bg-brand-background p-6 rounded-3xl shadow-md"
+        data-aos="fade-left"
+      >
+        <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="text"
+          name="nome"
+          required
+          placeholder="Seu nome"
+          class="w-full border border-brand-moss rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-mint"
+        />
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Seu e-mail"
+          class="w-full border border-brand-moss rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-mint"
+        />
+        <textarea
+          name="mensagem"
+          required
+          placeholder="Como posso te ajudar?"
+          class="w-full h-32 border border-brand-moss rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-mint"
+        ></textarea>
+        <button type="submit" class="btn-primary w-full">
+          Enviar mensagem
+        </button>
+      </form>
     </div>
   </section>
 </BaseLayout>

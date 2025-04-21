@@ -3,207 +3,205 @@ import "../styles/global.css";
 const currentYear = new Date().getFullYear();
 ---
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dra. Giovanna Paulo | Médica Pediatra</title>
-  <meta
-    name="description"
-    content="Atendimento pediátrico humanizado com foco no desenvolvimento saudável do seu filho. Agende sua consulta com a Dra. Giovanna Paulo."
-  />
-  <meta property="og:image" content="/assets/logo.jpg" />
-  <link rel="icon" href="/assets/favicon.ico" />
-</head>
-
-<body
-  class="bg-brand-background text-brand-moss font-outfit selection:bg-brand-pink/40"
->
-  <!-- Header fixo -->
-  <header
-    class="sticky top-0 z-50 backdrop-blur-md bg-white/60 shadow-sm transition-all duration-300"
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dra. Giovanna Paulo | Médica Pediatra</title>
+    <meta
+      name="description"
+      content="Atendimento pediátrico humanizado com foco no desenvolvimento saudável do seu filho. Agende sua consulta com a Dra. Giovanna Paulo."
+    />
+    <meta property="og:image" content="/assets/logo.jpg" />
+    <link rel="icon" href="/assets/favicon.ico" />
+  </head>
+  <body
+    class="bg-brand-background text-brand-moss font-outfit selection:bg-brand-pink/40"
   >
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="/">
-        <img
-          src="/assets/logo.png"
-          alt="Logo da Dra. Giovanna Paulo"
-          class="h-12 w-auto object-contain"
-        />
-      </a>
-
-      <!-- Mobile menu toggle -->
-      <button
-        id="menuToggle"
-        class="sm:hidden text-brand-moss focus:outline-none"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-6 h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-
-      <!-- Navegação e botões -->
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur-md bg-white/60 shadow-sm transition-all duration-300"
+    >
       <div
-        id="menuContent"
-        class="hidden sm:flex flex-1 justify-between items-center w-full sm:ml-10"
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
       >
-        <!-- Navegação -->
-        <ul
-          class="flex-1 flex justify-center gap-6 text-sm font-syncopate text-brand-moss"
-        >
-          <li>
-            <a href="/" class="group relative">
-              <span class="hover:text-brand-pink transition">Início</span>
-              <span
-                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
-              ></span>
-            </a>
-          </li>
-          <li>
-            <a href="/sobre" class="group relative">
-              <span class="hover:text-brand-pink transition">Sobre</span>
-              <span
-                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
-              ></span>
-            </a>
-          </li>
-          <li>
-            <a href="/especialidades" class="group relative">
-              <span class="hover:text-brand-pink transition"
-                >Especialidades</span
-              >
-              <span
-                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
-              ></span>
-            </a>
-          </li>
-          <li>
-            <a href="/contato" class="group relative">
-              <span class="hover:text-brand-pink transition">Contato</span>
-              <span
-                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
-              ></span>
-            </a>
-          </li>
-        </ul>
-        <!-- Botões -->
-        <div class="flex items-center gap-4">
-          <!-- Instagram com efeito de rotação suave -->
-          <a
-            href="https://www.instagram.com/dragiovannapaulo"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group flex items-center gap-1 text-brand-moss hover:text-brand-pink transition text-sm"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              class="w-5 h-5 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
-            >
-              <path
-                d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8.75 2.75a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75Zm-4.25 1a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"
-              ></path>
-            </svg>
-            <span class="hidden sm:inline">Instagram</span>
-          </a>
+        <!-- Logo -->
+        <a href="/">
+          <img
+            src="/assets/logo.png"
+            alt="Logo da Dra. Giovanna Paulo"
+            class="h-12 w-auto object-contain"
+          />
+        </a>
 
-          <a
-            href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de marcar uma consulta."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-brand-mint text-white px-4 py-2 rounded-full text-sm font-medium hover:scale-105 transition"
+        <!-- Mobile menu toggle -->
+        <button
+          id="menuToggle"
+          class="sm:hidden text-brand-moss focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            Agende sua consulta
-          </a>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <!-- Navegação e botões -->
+        <div
+          id="menuContent"
+          class="hidden sm:flex flex-1 justify-between items-center w-full sm:ml-10"
+        >
+          <!-- Navegação -->
+          <ul
+            class="flex-1 flex justify-center gap-6 text-sm font-syncopate text-brand-moss"
+          >
+            <li>
+              <a href="/" class="group relative">
+                <span class="hover:text-brand-pink transition">Início</span>
+                <span
+                  class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a href="/sobre" class="group relative">
+                <span class="hover:text-brand-pink transition">Sobre</span>
+                <span
+                  class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a href="/especialidades" class="group relative">
+                <span class="hover:text-brand-pink transition"
+                  >Especialidades</span
+                >
+                <span
+                  class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a href="/contato" class="group relative">
+                <span class="hover:text-brand-pink transition">Contato</span>
+                <span
+                  class="absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-pink transition-all duration-300 group-hover:w-full"
+                ></span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Botões -->
+          <div class="flex items-center gap-4">
+            <a
+              href="https://www.instagram.com/dragiovannapaulo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center gap-1 text-brand-moss hover:text-brand-pink transition text-sm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="w-5 h-5 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
+              >
+                <path
+                  d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8.75 2.75a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75Zm-4.25 1a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"
+                ></path>
+              </svg>
+              <span class="hidden sm:inline">Instagram</span>
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de marcar uma consulta."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-brand-mint text-white px-4 py-2 rounded-full text-sm font-medium hover:scale-105 transition"
+            >
+              Agende sua consulta
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Menu responsivo para mobile -->
-    <div id="mobileMenu" class="sm:hidden hidden px-6 pb-4">
-      <ul class="flex flex-col gap-3 text-brand-moss">
-        <li><a href="/" class="hover:text-brand-pink transition">Início</a></li>
-        <li>
-          <a href="/sobre" class="hover:text-brand-pink transition">Sobre</a>
-        </li>
-        <li>
-          <a href="/especialidades" class="hover:text-brand-pink transition"
-            >Especialidades</a
-          >
-        </li>
-        <li>
-          <a href="/contato" class="hover:text-brand-pink transition">Contato</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/dragiovannapaulo"
-            target="_blank"
-            class="hover:text-brand-pink transition">Instagram</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de marcar uma consulta."
-            target="_blank"
-            class="text-white bg-brand-mint px-4 py-2 rounded-full text-sm font-medium"
-          >
-            Agendar Consulta
-          </a>
-        </li>
-      </ul>
-    </div>
+      <!-- Menu mobile -->
+      <div id="mobileMenu" class="sm:hidden hidden px-6 pb-4">
+        <ul class="flex flex-col gap-3 text-brand-moss">
+          <li>
+            <a href="/" class="hover:text-brand-pink transition">Início</a>
+          </li>
+          <li>
+            <a href="/sobre" class="hover:text-brand-pink transition">Sobre</a>
+          </li>
+          <li>
+            <a href="/especialidades" class="hover:text-brand-pink transition"
+              >Especialidades</a
+            >
+          </li>
+          <li>
+            <a href="/contato" class="hover:text-brand-pink transition"
+              >Contato</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/dragiovannapaulo"
+              target="_blank"
+              class="hover:text-brand-pink transition">Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://api.whatsapp.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de marcar uma consulta."
+              target="_blank"
+              class="text-white bg-brand-mint px-4 py-2 rounded-full text-sm font-medium"
+              >Agendar Consulta</a
+            >
+          </li>
+        </ul>
+      </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.getElementById("menuToggle");
-        const mobileMenu = document.getElementById("mobileMenu");
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const menuToggle = document.getElementById("menuToggle");
+          const mobileMenu = document.getElementById("mobileMenu");
 
-        if (menuToggle && mobileMenu) {
-          menuToggle.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-          });
-        }
-      });
+          if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener("click", () => {
+              mobileMenu.classList.toggle("hidden");
+            });
+          }
+        });
+      </script>
+    </header>
+
+    <!-- Conteúdo -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-brand-mint text-white py-6">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <p class="text-sm mb-2">
+          &copy; {currentYear} Dra. Giovanna Paulo · Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module">
+      import AOS from "aos";
+      import "aos/dist/aos.css";
+      AOS.init({ once: true, duration: 800, offset: 100 });
     </script>
-  </header>
-
-  <!-- Conteúdo -->
-  <main>
-    <slot />
-  </main>
-
-  <!-- Rodapé -->
-  <footer class="bg-brand-mint text-white py-6">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p class="text-sm mb-2">
-        &copy; {currentYear} Dra. Giovanna Paulo · Todos os direitos reservados.
-      </p>
-    </div>
-  </footer>
-
-  <!-- AOS Script -->
-  <script type="module">
-    import AOS from "aos";
-    import "aos/dist/aos.css";
-
-    AOS.init({
-      once: true,
-      duration: 800,
-      offset: 100,
-    });
-  </script>
-
-  <script type="module" src="/src/scripts/aos-init.js"></script>
-</body>
+    <script type="module" src="/src/scripts/aos-init.js"></script>
+  </body>
+</html>
