@@ -14,7 +14,10 @@
       theme("colors.brand.backgroundEnd") 100%
     );
   }
-
+  html, body {
+    overflow-x: hidden;
+  }
+  
   section h1,
   section h2,
   section h3 {
@@ -100,5 +103,26 @@
 }
 
 .animate-ribbon {
-  animation: ribbon-scroll 30s linear infinite;
+  animation: ribbon-scroll 20s linear infinite;
+}
+
+@media (max-width: 640px) {
+  .animate-ribbon {
+    animation-duration: 12s; /* mais rápido no mobile */
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(166, 209, 185, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(166, 209, 185, 0);
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.2s infinite;
 }

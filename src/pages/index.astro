@@ -53,7 +53,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	</section>
 
 	<!-- FITA ANIMADA -->
-	<section class="overflow-hiddenbg-brand-mint">
+	<section class="overflow-hidden bg-brand-mint">
 		<div class="overflow-hidden bg-brand-mint/70 py-3 select-none">
 			<div
 				class="whitespace-nowrap animate-ribbon text-white text-sm sm:text-base font-semibold uppercase tracking-widest flex gap-10"
@@ -78,7 +78,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			<div class="flex justify-center" data-aos="fade-right">
 				<!-- Forma de fundo animada -->
 				<div
-					class="absolute w-[280px] sm:w-[360px] md:w-[460px] lg:w-[560px] h-[280px] sm:h-[360px] md:h-[460px] lg:h-[620px] xl:h[640px] rounded-full bg-brand-mint/20 blur-3x1 animate-reverse-float z-0"
+					class="absolute w-[280px] sm:w-[360px] md:w-[460px] lg:w-[560px] h-[280px] sm:h-[360px] md:h-[460px] lg:h-[620px] xl:h-[640px] rounded-full bg-brand-mint/20 blur-3x1 animate-reverse-float z-0"
 				>
 				</div>
 				<img
@@ -411,23 +411,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	<!-- Botão Whatsapp - Mobile -->
 	<a
 		href="https://wa.me/5511919945665?text=Oi%2C%20tudo%20bem%3F%20Vi%20o%20site%20da%20Dra.%20Giovanna%20e%20gostaria%20de%20marcar%20uma%20consulta."
-		class="fixed bottom-6 right-6 bg-brand-mint text-white px-5 py-3 rounded-full shadow-lg z-50 sm:hidden hover:scale-105 transition"
+		class="fixed bottom-4 right-4 bg-brand-mint text-white px-4 py-2 rounded-full text-xs sm:text-sm font-medium shadow-lg z-40 sm:hidden animate-pulse-soft"
 	>
 		Agendar no WhatsApp
 	</a>
-
-	<script type="module">
-		import AOS from "aos";
-		import "aos/dist/aos.css";
-
-		AOS.init({
-			duration: 800,
-			once: true,
-			offset: 100,
-			easing: "ease-in-out",
-		});
-
-		// Garantir que reative ao navegar com Astro
-		setTimeout(() => AOS.refresh(), 500);
-	</script>
 </BaseLayout>
+
+<script type="module">
+	import AOS from "aos";
+	import "aos/dist/aos.css";
+
+	AOS.init({
+		duration: 800,
+		once: true,
+		offset: 100,
+		easing: "ease-in-out",
+	});
+
+	// Garantir que reative ao navegar com Astro
+	setTimeout(() => AOS.refresh(), 500);
+</script>
