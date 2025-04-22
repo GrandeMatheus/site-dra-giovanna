@@ -86,3 +86,16 @@
   .animate-reverse-float{
     animation: float-reverse 6s ease-in-out infinitel;
   }
+
+  @keyframes ribbon-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-ribbon {
+    animation: ribbon-scroll 30s linear infinite;
+  }

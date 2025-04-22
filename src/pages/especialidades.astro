@@ -7,12 +7,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section class="relative py-44 px-6 text-center overflow-hidden cursor-logo">
     <!-- 🎥 Vídeo de fundo -->
     <video
-      src="/public/videos/especialidades.mp4"
+      src="/videos/especialidades.mp4"
       autoplay
       muted
       loop
       playsinline
-      class="absolute inset-0 w-full h-full object-cover object-left z-0 brightness-[1.1] grayscale"
+      class="absolute inset-0 w-full h-[520px] sm:h-[600px] md:h-[700px] lg:h-[800px] object-cover object-center z-0 brightness-[1.1] grayscale"
     ></video>
 
     <!-- 🧥 Camada escura transparente para leitura -->
@@ -38,19 +38,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <!-- BLOCO DE ESPECIALIDADES -->
-  <section class="py-20 px-6">
+  <section class="py-20 px-4 sm:px-6">
     <div
-      class="max-w-6xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3"
+      class="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
       data-aos="fade-up"
       data-aos-delay="100"
     >
       <div
         class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
         <h2 class="text-2xl font-semibold text-brand-moss mb-3">
           Consulta Pediátrica
         </h2>
-        <p class="text-gray-700">
+        <p
+          class="text-gray-700 leading-relaxed text-base sm:text-[15px] md:text-[16px]"
+        >
           Acompanhamento regular da saúde e desenvolvimento infantil, desde o
           nascimento até a adolescência.
         </p>
@@ -58,11 +62,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <div
         class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+        data-aos="fade-up"
+        data-aos-delay="200"
       >
         <h2 class="text-2xl font-semibold text-brand-moss mb-3">
           Consulta do Recém-Nascido
         </h2>
-        <p class="text-gray-700">
+        <p
+          class="text-gray-700 leading-relaxed text-base sm:text-[15px] md:text-[16px]"
+        >
           Primeiras semanas de vida com foco em acolhimento, orientação sobre
           amamentação, rotina e vínculo afetivo.
         </p>
@@ -70,11 +78,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <div
         class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+        data-aos="fade-up"
+        data-aos-delay="300"
       >
         <h2 class="text-2xl font-semibold text-brand-moss mb-3">
           Introdução Alimentar
         </h2>
-        <p class="text-gray-700">
+        <p
+          class="text-gray-700 leading-relaxed text-base sm:text-[15px] md:text-[16px]"
+        >
           Orientação individualizada para pais e cuidadores iniciarem a
           alimentação complementar com segurança e leveza.
         </p>
@@ -82,11 +94,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <div
         class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+        data-aos="fade-up"
+        data-aos-delay="400"
       >
         <h2 class="text-2xl font-semibold text-brand-moss mb-3">
           Consulta Pré-Natal Pediátrica
         </h2>
-        <p class="text-gray-700">
+        <p
+          class="text-gray-700 leading-relaxed text-base sm:text-[15px] md:text-[16px]"
+        >
           Atendimento aos futuros pais com foco nos cuidados iniciais com o
           bebê, preparo emocional e criação de vínculo.
         </p>
@@ -94,11 +110,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <div
         class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+        data-aos="fade-up"
+        data-aos-delay="500"
       >
         <h2 class="text-2xl font-semibold text-brand-moss mb-3">
           Consulta de Urgência
         </h2>
-        <p class="text-gray-700">
+        <p
+          class="text-gray-700 leading-relaxed text-base sm:text-[15px] md:text-[16px]"
+        >
           Atendimento ágil e humanizado para quadros agudos não emergenciais,
           com foco na tranquilidade da família.
         </p>
@@ -106,11 +126,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <div
         class="bg-white rounded-3xl shadow-lg p-6 hover:shadow-xl transition cursor-logo"
+        data-aos="fade-up"
+        data-aos-delay="600"
       >
         <h2 class="text-2xl font-semibold text-brand-moss mb-3">
           Acompanhamento do Sono
         </h2>
-        <p class="text-gray-700">
+        <p
+          class="text-gray-700 leading-relaxed text-base sm:text-[15px] md:text-[16px]"
+        >
           Suporte para famílias com dúvidas sobre rotina noturna, higiene do
           sono e mudanças de fase.
         </p>
@@ -119,7 +143,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <!-- CTA FINAL -->
-  <section class="py-20 px-6 text-center" data-aos="fade-up">
+  <section class="py-20 px-4 sm:px-6 text-center" data-aos="fade-up">
     <h2 class="text-3xl font-bold text-brand-moss mb-4">
       Pronta para cuidar com amor?
     </h2>
