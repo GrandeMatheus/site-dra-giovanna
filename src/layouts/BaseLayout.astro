@@ -14,6 +14,7 @@ const currentYear = new Date().getFullYear();
     />
     <meta property="og:image" content="/assets/logo.jpg" />
     <link rel="icon" href="/assets/favicon.ico" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body
     class="bg-brand-background text-brand-moss font-outfit selection:bg-brand-pink/40"
@@ -120,7 +121,7 @@ const currentYear = new Date().getFullYear();
               <span class="hidden sm:inline">Instagram</span>
             </a>
             <a
-              href="https://wa.me.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de marcar uma consulta."
+              href="https://wa.me/5511919945665?text=Oi%2C%20tudo%20bem%3F%20Vi%20o%20site%20da%20Dra.%20Giovanna%20e%20gostaria%20de%20marcar%20uma%20consulta.."
               target="_blank"
               rel="noopener noreferrer"
               class="bg-brand-mint text-white px-4 py-2 rounded-full text-sm font-medium hover:scale-105 transition"
@@ -159,7 +160,7 @@ const currentYear = new Date().getFullYear();
           </li>
           <li>
             <a
-              href="https://wa.me.com/send?phone=5511919945665&text=Oi, tudo bem? Vi o site da Dra. Giovanna e gostaria de marcar uma consulta."
+              href="https://wa.me/5511919945665?text=Oi%2C%20tudo%20bem%3F%20Vi%20o%20site%20da%20Dra.%20Giovanna%20e%20gostaria%20de%20marcar%20uma%20consulta."
               target="_blank"
               class="text-white bg-brand-mint px-4 py-2 rounded-full text-sm font-medium"
               >Agendar Consulta</a
@@ -197,11 +198,8 @@ const currentYear = new Date().getFullYear();
     </footer>
 
     <!-- Scripts -->
-    <script type="module">
-      import AOS from "aos";
-      import "aos/dist/aos.css";
-      AOS.init({ once: true, duration: 800, offset: 100 });
-    </script>
-    <script type="module" src="/src/scripts/aos-init.js"></script>
+    <script
+      src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+      onload="AOS.init({ once: true, duration: 800, offset: 100 })"></script>
   </body>
 </html>
