@@ -1,0 +1,11 @@
+# Permitir acesso completo a todos os bots
+User-agent: *
+Allow: /
+
+# Bloquear pastas sensíveis ou irrelevantes (se existirem)
+Disallow: /admin/
+Disallow: /scripts/
+Disallow: /drafts/
+
+# Sitemap para indexação otimizada
+Sitemap: https://dragiovannapaulo.com.br/sitemap.xml
